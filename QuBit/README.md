@@ -53,6 +53,8 @@ conda activate mychatbot
 ```
 pip install -r requirements.txt
 ```
+- Install the open source llm model in the main repository:
+https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q8_0.bin
 - Run the vectordb_create.py to create the victorstore:
 ```
 python vectordb_create.py
