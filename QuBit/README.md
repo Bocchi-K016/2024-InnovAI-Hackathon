@@ -1,4 +1,5 @@
 # Sahara Sage: “The Moroccan Digital Travel Companion” 🗺️✈️
+![Alt text](https://github.com/Bocchi-K016/2024-InnovAI-Hackathon/raw/main/QuBit/logo.png)
 ## Problem Statement: 🤔
 Imagine planning your first vacation to Morocco 🏖️. You're excited to explore its bustling markets, beautiful landscapes, and rich culture, but you’re overwhelmed by the sheer amount of information out there. Searching for recommendations online takes hours, but most sources are either too general or not in your preferred language 🌍💬.
 
