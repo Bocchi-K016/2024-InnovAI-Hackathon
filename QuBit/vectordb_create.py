@@ -4,7 +4,7 @@ from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.docstore.document import Document
 
-# Paths for your dataset and vector database
+# Paths
 DATA_PATH = 'deduplicated_dataset.json'
 DB_FAISS_PATH = 'vectorstore/db_faiss'
 
@@ -48,7 +48,7 @@ def create_vector_db():
     
     # Text splitter to chunk documents
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=500,  # Adjust based on your document length
+        chunk_size=500,
         chunk_overlap=50
     )
     
@@ -65,7 +65,6 @@ def create_vector_db():
     try:
         db = FAISS.from_documents(texts, embeddings)
         
-        # Save locally
         db.save_local(DB_FAISS_PATH)
         print(f"Vector database successfully created and saved to {DB_FAISS_PATH}")
     
@@ -89,7 +88,6 @@ def load_vector_db():
         return None
 
 if __name__ == "__main__":
-    # Ensure the vectorstore directory exists
     import os
     os.makedirs('vectorstore', exist_ok=True)
     
