@@ -39,7 +39,6 @@ def load_llm():
     Load the GGML model using CTransformers
     """
     try:
-        # Verify model file exists
         if not os.path.exists(LLM_PATH):
             print(f"Error: Model file not found at {LLM_PATH}")
             print("Current directory contents:", os.listdir())
@@ -223,8 +222,7 @@ async def main(message: cl.Message):
         if answer.endswith('Marrak'):
             answer = answer.rstrip('Marrak')
         
-        # Optional: Remove repetitive information
-        # This is a simple approach and might need refinement
+        # Remove repetitive information
         lines = answer.split('\n')
         unique_lines = []
         seen = set()
@@ -235,7 +233,6 @@ async def main(message: cl.Message):
         
         answer = '\n'.join(unique_lines)
         
-        # Send the response WITHOUT sources
         await cl.Message(content=answer).send()
     
     except Exception as e:
